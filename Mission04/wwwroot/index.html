@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is the Header -->
+    <!-- Tate Gilles Mission04 assignment-->
+    <meta charset="utf-8" />
+    <title>Tate Gillespie's Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type="image/x-icon">
+</head>
+<body>
+    <!--Basice information about me along with the picture-->
+    <h1>Tate Gillespie</h1>
+    <img src="img/tate.jpeg" id="picTate" height="300" width="500" />
+    <p>From the IS 413 class I hope to gain the ability to build full-scale web applications to pull, display, and manipulate API data. I will be able to perform machine learning algorithms in these applications and hopefully know enough to create an app to start a business.</p>
+    <br />
+    <p>Top 3 jobs</p>
+    <ol>
+        <li>Software Engineer</li>
+        <li>Data Scientist/Machine Learning Specialist</li>
+        <li>Businees Intelligence Analyst</li>
+    </ol>
+
+    <!--The grade calculator form-->
+    <h2>Grade Calculator</h2>
+    <h4 id="Final_Grade" style="color: red;"></h4>
+    <form>
+        <div class="mb-3 mt-3">
+            <label for="assignments" class="form-label">Assignments:</label>
+            <input type="number" class="form-control" id="assignments" placeholder="Enter assignment grade as percentage" name="assignments">
+        </div>
+        <div class="mb-3">
+            <label for="group_project" class="form-label">Group Projects:</label>
+            <input type="number" class="form-control" id="group_project" placeholder="Enter projects grade as a percentage" name="group_project">
+        </div>
+        <div class="mb-3">
+            <label for="quizzes" class="form-label">Quizzes:</label>
+            <input type="number" class="form-control" id="quizzes" placeholder="Enter quizzes as a percentage" name="quizzes">
+        </div>
+        <div class="mb-3">
+            <label for="midterm" class="form-label">Midterm:</label>
+            <input type="number" class="form-control" id="midterm" placeholder="Enter midterm as a percentage" name="midterm">
+        </div>
+        <div class="mb-3">
+            <label for="final" class="form-label">Final:</label>
+            <input type="number" class="form-control" id="final" placeholder="Enter final as a percentage" name="final">
+        </div>
+        <div class="mb-3">
+            <label for="intex" class="form-label">Intex:</label>
+            <input type="number" class="form-control" id="intex" placeholder="Enter intex as a percentage" name="intex">
+        </div>
+        <input type="button" id="btn-submit" class="btn btn-primary" value="submit" />
+    </form>
+
+    <!--Script tags for jquery, javascript, and bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+    <script src="js/gradecalculator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
