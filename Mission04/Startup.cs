@@ -29,8 +29,20 @@ namespace Mission04
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseDefaultFiles();
+            if (env.IsEnvironment("Development"))
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            // app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Blah}/{action=Index}/{id?}"
+                    );
+            });
         }
     }
 }

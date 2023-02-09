@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{ViewData["Title"] = "Grade Calculator Page";
+    ViewData["CSS"] = "../../css/style.css";
+    ViewData["GradeCalculator"] = "../../js/gradecalculator.js";
+
+}
+
+@model Mission04.Models.GradeCalculator
+<!--The grade calculator form-->
+<h2>Grade Calculator</h2>
+<!--<h4 id="Final_Grade" style="color: red;"></h4>-->
+<form method="post" asp-controller="blah" asp-action="GradeCalculator">
+    <div class="mb-3 mt-3">
+        <label for="assignments" class="form-label">Assignments:</label>
+        <input type="number" class="form-control" id="assignments" placeholder="Enter assignment grade as percentage" name="assignments" min="0" max="100">
+        @Html.ValidationMessageFor(m => m.Assignments)
+    </div>
+    <div class="mb-3">
+        <label for="group_project" class="form-label">Group Projects:</label>
+        <input type="number" class="form-control" id="groupproject" placeholder="Enter projects grade as a percentage" name="groupproject">
+        @Html.ValidationMessageFor(m => m.GroupProject)
+
+    </div>
+    <div class="mb-3">
+        <label for="quizzes" class="form-label">Quizzes:</label>
+        <input type="number" class="form-control" id="quizzes" placeholder="Enter quizzes as a percentage" name="quizzes">
+        @Html.ValidationMessageFor(m => m.Quizzes)
+
+    </div>
+    <div class="mb-3">
+        <label for="midterm" class="form-label">Midterm:</label>
+        <input type="number" class="form-control" id="midterm" placeholder="Enter midterm as a percentage" name="midterm">
+        @Html.ValidationMessageFor(m => m.Midterm)
+
+    </div>
+    <div class="mb-3">
+        <label for="final" class="form-label">Final:</label>
+        <input type="number" class="form-control" id="final" placeholder="Enter final as a percentage" name="final">
+        @Html.ValidationMessageFor(m => m.Final)
+
+    </div>
+    <div class="mb-3">
+        <label for="intex" class="form-label">Intex:</label>
+        <input type="number" class="form-control" id="intex" placeholder="Enter intex as a percentage" name="intex">
+        @Html.ValidationMessageFor(m => m.Intex)
+
+    </div>
+    <input type="submit" value="Submit" id="btn-submit" class="btn btn-primary"/>
+
+    <!--<input type="button" id="btn-submit" class="btn btn-primary" value="submit" />-->
+</form>

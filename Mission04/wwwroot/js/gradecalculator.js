@@ -3,7 +3,7 @@ $('#btn-submit').click(function () {
 
     // values are grabbed and parsed from the grade calculator form
     let assignments = parseInt($('#assignments').val())
-    let group_projects = parseInt($('#group_project').val())
+    let group_projects = parseInt($('#groupproject').val())
     let quizzes = parseInt($('#quizzes').val())
     let midterm = parseInt($('#midterm').val())
     let final = parseInt($('#final').val())
@@ -54,8 +54,8 @@ $('#btn-submit').click(function () {
         letterGrade = 'E'
     }
 
+     // $("#Final_Grade").html('Percent Grade: ' + total_grade + "<br>Letter Grade: " + letterGrade)
     // This is the alert that outputs the total grade and the letter grade for the student
-    // alert('Percent Grade: ' + total_grade + "\nLetter Grade: " + letterGrade)
 
-    $("#Final_Grade").html('Percent Grade: ' + total_grade + "<br>Letter Grade: " + letterGrade)
+    alert('Percent Grade: ' + total_grade + "\nLetter Grade: " + letterGrade)
 })
